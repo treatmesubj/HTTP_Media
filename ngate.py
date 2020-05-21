@@ -27,7 +27,10 @@ for story in story_elems:
 	story_soup = BeautifulSoup(str(story), 'html.parser')
 	for child in story_soup.select_one("p").children:
 		if type(child) is element.Tag:
-			child.decompose()
+			if "style" in child.attrs or child.name == 'i':
+				pass
+			else:
+				child.decompose()
 
 	title = story.select_one("span a").text
 	link = story.select_one("span a").attrs['href']
