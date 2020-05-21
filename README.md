@@ -4,6 +4,6 @@ Ironically read the n-gate's latest post, most likely an annotated digest of the
 ![alt text](https://github.com/treatmesubj/HTTP_Media/blob/master/Screenshot%20(25).png)
 
 # Github Trending
-Gathers the day's trending Python repositories on Github on displays them
+Gathers the day's trending Python repositories on Github and displays brief info about them
 
 ![alt text](https://github.com/treatmesubj/HTTP_Media/blob/master/Screenshot%20(30).png)
