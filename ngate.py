@@ -31,10 +31,13 @@ for story in story_elems:
 				pass
 			else:
 				child.decompose()
-
-	title = story.select_one("span a").text
-	link = story.select_one("span a").attrs['href']
-	date = story.select_one("span.smalldate").text
-	print(f"[{date} | {title} | {link}]\n")
-	annotation = story_soup.text.strip()
-	print(annotation, end="\n\n\n")
+	try:
+		title = story.select_one("span a").text
+		link = story.select_one("span a").attrs['href']
+		date = story.select_one("span.smalldate").text
+		print(f"[{date} | {title} | {link}]\n")
+		annotation = story_soup.text.strip()
+		if len(annotation) != 0:  # ngate messin stuff up
+			print(annotation, end="\n\n\n")
+	except Exception:
+		print(story, end="\n\n\n")
