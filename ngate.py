@@ -6,13 +6,13 @@ session = requests.session()
 
 # find latest post
 html = session.get("http://n-gate.com/").text
-soup = BeautifulSoup(html, 'html.parser')
+soup = BeautifulSoup(html, 'html5lib')
 div_main = soup.select_one("div[id='main-copy']")
 latest_blog_href = div_main.select_one("h1 a").attrs['href']
 
 # go to latest post
 html = session.get(f"http://n-gate.com/{latest_blog_href}").text
-soup = BeautifulSoup(html, 'html.parser')
+soup = BeautifulSoup(html, 'html5lib')
 div_main = soup.select_one("div[id='main-copy']")
 blog_title = div_main.select_one("h1").text
 blog_desc = div_main.select_one("p").text
@@ -40,4 +40,4 @@ for story in story_elems:
 		if len(annotation) != 0:  # ngate messin stuff up
 			print(annotation, end="\n\n\n")
 	except Exception:
-		print(story, end="\n\n\n")
+		print(story.text, end="\n\n\n")
