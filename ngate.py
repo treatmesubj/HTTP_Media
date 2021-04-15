@@ -6,13 +6,13 @@ session = requests.session()
 
 # find latest post
 html = session.get("http://n-gate.com/").text
-soup = BeautifulSoup(html, 'html5lib')
+soup = BeautifulSoup(html, 'html.parser')
 div_main = soup.select_one("div[id='main-copy']")
 latest_blog_href = div_main.select_one("h1 a").attrs['href']
 
 # go to latest post
 html = session.get(f"http://n-gate.com/{latest_blog_href}").text
-soup = BeautifulSoup(html, 'html5lib')
+soup = BeautifulSoup(html, 'html.parser')
 div_main = soup.select_one("div[id='main-copy']")
 blog_title = div_main.select_one("h1").text
 blog_desc = div_main.select_one("p").text
@@ -33,11 +33,12 @@ for story in story_elems:
 				child.decompose()
 	try:
 		title = story.select_one("span a").text
-		link = story.select_one("span a").attrs['href']
+		link = story.select_one("span.storylink a").attrs['href']
 		date = story.select_one("span.smalldate").text
-		print(f"[{date} | {title} | {link}]\n")
+		comments = story.select_one("span.small a").attrs['href']
+		print(f"[{date} | {title} | {link} | {comments}]\n")
 		annotation = story_soup.text.strip()
 		if len(annotation) != 0:  # ngate messin stuff up
 			print(annotation, end="\n\n\n")
 	except Exception:
-		print(story.text, end="\n\n\n")
+		print(story, end="\n\n\n")
