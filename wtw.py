@@ -62,6 +62,6 @@ if __name__ == "__main__":
 			
 			if (len(points_elems) != 0) and ("I am a bot" not in comment):
 				points = points_elems[0].attrs['title']
-				print(f"[{points} points]: {comment}")
+				print(f"[{points} point(s)]: {comment}")
 
 		print("+"*discussion)

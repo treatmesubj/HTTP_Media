@@ -8,7 +8,7 @@ Fetches /r/whatstheword/top/ and allows you to choose a post to read its comment
 
 Usage: `python wtw.py [1hr | 24hrs | week]`
 
-![](attachments/Pasted%20image%2020210507120314.png)
+![](attachments/wtw_demo.jpg)
 
 # Github Trending
 Gathers the day's trending Python repositories on Github and displays brief info about them
