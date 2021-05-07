@@ -6,7 +6,7 @@ Ironically read the n-gate's latest post, most likely an annotated digest of the
 # /r/whatstheword
 Fetches /r/whatstheword/top/ and allows you to choose a post to read its comments
 
-Usage: `python wtw.py [1hr | 24hrs | weeek]`
+Usage: `python wtw.py [1hr | 24hrs | week]`
 
 ![](attachments/Pasted%20image%2020210507120314.png)
 
