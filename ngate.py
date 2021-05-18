@@ -37,8 +37,11 @@ for story in story_elems:
 		date = story.select_one("span.smalldate").text
 		comments = story.select_one("span.small a").attrs['href']
 		print(f"[{date} | {title} | {link} | {comments}]\n")
-		annotation = story_soup.text.strip()
-		if len(annotation) != 0:  # ngate messin stuff up
-			print(annotation, end="\n\n\n")
+	except AttributeError:
+		pass
 	except Exception:
 		print(story, end="\n\n\n")
+
+	annotation = story_soup.text.strip()
+	if len(annotation) != 0:  # ngate messin stuff up
+		print(annotation, end="\n\n\n")
