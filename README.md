@@ -6,7 +6,7 @@ Fetch the front page of Hacker News
 # N-Gate
 Ironically read the n-gate's latest post, most likely an annotated digest of the top "Hacker" "News" posts
 
-![](./attachments/ngate.png)
+![](./attachments/n_gate.png)
 
 # /r/whatstheword
 Fetches /r/whatstheword/top/ and allows you to choose a post to read its comments
@@ -18,4 +18,4 @@ Usage: `python wtw.py [1hr | 24hrs | week]`
 # Github Trending
 Gathers the day's trending Python repositories on Github and displays brief info about them
 
-![](./attachments/webshit.png)
+![](./attachments/web_shit.png)
