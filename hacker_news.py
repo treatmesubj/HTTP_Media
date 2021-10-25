@@ -5,7 +5,7 @@ from rich import pretty, print;pretty.install();
 res = requests.get('https://news.ycombinator.com')
 soup = BeautifulSoup(res.text, 'html.parser')
 
-post_elems = soup.select('.storylink')
+post_elems = soup.select('.titlelink')
 subtext_elems = soup.select('.subtext')
 
 
