@@ -19,8 +19,7 @@ blog_desc = div_main.select_one("p").text
 story_elems = soup.select("div[id='main-copy'] p")[1:]
 
 # get ascii art for blog title
-ascii_art = session.get(f"http://artii.herokuapp.com/make?text={blog_title}&font=smslant").text
-print(ascii_art)
+print(blog_title)
 print(blog_desc, end='\n\n')
 
 for story in story_elems:
