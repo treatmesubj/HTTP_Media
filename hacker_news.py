@@ -18,7 +18,7 @@ def get_news_info(post_elems, subtext_elems):
 
     for index, elem in enumerate(post_elems):
         title = post_elems[index].getText()
-        story_link = post_elems[index].get('href', None)
+        story_link = post_elems[index].select_one('a[href]').get('href', None)
         try:
             points = int(subtext_elems[index].select_one('.score').getText().strip(' points'))
         except AttributeError:
