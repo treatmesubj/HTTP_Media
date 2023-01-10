@@ -71,19 +71,12 @@ Gathers the day's trending Python repositories on Github and displays brief info
 
 ```
 PS [rock] [C:] ...\HTTP_Media> python .\ght.py
-~~~prometheus / client_python~~~  {
-        https://github.com/prometheus/client_python
-        Prometheus instrumentation library for Python applications
-}
+['openai', 'openai-cookbook']
+https://github.com/openai/openai-cookbook
+Examples and guides for using the OpenAI API
 
-~~~huggingface / diffusers~~~  {
-        https://github.com/huggingface/diffusers
-        🤗
-Diffusers: State-of-the-art diffusion models for image and audio generation in PyTorch
-}
 
-~~~Sanster / lama-cleaner~~~  {
-        https://github.com/Sanster/lama-cleaner
-        Image inpainting tool powered by SOTA AI Model. Remove any unwanted object, defect, people from your pictures or erase and replace(powered by stable diffusion) any thing on your pictures.
-}
+['microsoft', 'unilm']
+https://github.com/microsoft/unilm
+Large-scale Self-supervised Pre-training Across Tasks, Languages, and Modalities
 ```
