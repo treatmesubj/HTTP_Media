@@ -67,7 +67,7 @@ Huh?
 ```
 
 # Github Trending
-Gathers the day's trending Python repositories on Github and displays brief info about them
+Gathers the week's trending repositories on Github and displays brief info about them
 
 ```
 PS [rock] [C:] ...\HTTP_Media> python .\ght.py
