@@ -7,12 +7,22 @@ if __name__ == "__main__":
     soup = BeautifulSoup(html, 'html.parser')
 
     for proj in soup.select("article"):
+
         title = proj.select_one("h1 a")
-        desc = proj.select_one("p")
-        print(f"{[x.strip() for x in title.text.split('/')]}", proj.select_one("span[itemprop='programmingLanguage']").text)
+        if title:
+            print(f"{[x.strip() for x in title.text.split('/')]}", end=" ")
+
+        lang = proj.select_one("span[itemprop='programmingLanguage']")
+        if lang:
+            print(lang.text)
+        else:
+            print()
+
         print(f"https://github.com{title.attrs['href']}")
-        try:
+
+        desc = proj.select_one("p")
+        if desc:
             print(f"{desc.text.strip()}")
-        except AttributeError:
-            pass
+
         print("\n")
+
