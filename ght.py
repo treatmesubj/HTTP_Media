@@ -6,23 +6,23 @@ if __name__ == "__main__":
     html = requests.get("https://github.com/trending?since=weekly").text
     soup = BeautifulSoup(html, 'html.parser')
 
-    for proj in soup.select("article"):
+    for proj_elem in soup.select("article"):
+        title = []; link = ''; lang = ''; desc = '';
 
-        title = proj.select_one("h1 a")
-        if title:
-            print(f"{[x.strip() for x in title.text.split('/')]}", end=" ")
+        title_elem = proj_elem.select_one("h2 a")
+        if title_elem:
+            title = f"{[x.strip() for x in title_elem.text.split('/')]}"
+            link = f"https://github.com{title_elem.attrs['href']}"
 
-        lang = proj.select_one("span[itemprop='programmingLanguage']")
-        if lang:
-            print(lang.text)
-        else:
-            print()
+        lang_elem = proj_elem.select_one("span[itemprop='programmingLanguage']")
+        if lang_elem:
+            lang = lang_elem.text
 
-        print(f"https://github.com{title.attrs['href']}")
+        desc_elem = proj_elem.select_one("p")
+        if desc_elem:
+            desc = desc_elem.text.strip()
 
-        desc = proj.select_one("p")
-        if desc:
-            print(f"{desc.text.strip()}")
-
-        print("\n")
+        print(f"{title} {lang}")
+        print(link)
+        print(f"{desc}\n")
 
