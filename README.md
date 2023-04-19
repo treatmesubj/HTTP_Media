@@ -2,7 +2,8 @@
 Fetch the front page of Hacker News
 
 ```
-PS [rock] [C:] ...\HTTP_Media> python .\hacker_news.py
+john@spectre:~
+$ python hacker_news.py
 [713]: I fought the PayPal and I won (jessesingal.substack.com)
 story: None
 comments: https://news.ycombinator.com/item?id=33462658
@@ -28,7 +29,8 @@ comments: https://news.ycombinator.com/item?id=33463683
 Ironically read the n-gate's latest post, most likely an annotated digest of the top "Hacker" "News" posts
 
 ```
-PS [rock] [C:] ...\HTTP_Media> python .\ngate.py
+john@spectre:~
+$ python ngate.py
 webshit weekly
 An annotated digest of the top "Hacker" "News" posts for the second week of August, 2021.
 
@@ -44,7 +46,8 @@ Fetches /r/whatstheword/top/ and allows you to choose a post to read its comment
 Usage: `python wtw.py [1hr | 24hrs | week]`
 
 ```
-PS [rock] [C:] ...\HTTP_Media> python .\wtw.py
+john@spectre:~
+$ python wtw.py
 [Top Posts in past 24hrs]:
 (0): WTW for a supervising adult at a kids party.
 (1): WTW for when you completely give up on something (or deliberately keep on making mistakes) because you made a small mistake?
@@ -70,13 +73,13 @@ Huh?
 Gathers the week's trending repositories on Github and displays brief info about them
 
 ```
-PS [rock] [C:] ...\HTTP_Media> python .\ght.py
-['openai', 'openai-cookbook']
-https://github.com/openai/openai-cookbook
-Examples and guides for using the OpenAI API
+john@spectre:~
+$ python ght.py
+['Significant-Gravitas', 'Auto-GPT'] Python
+https://github.com/Significant-Gravitas/Auto-GPT
+An experimental open-source attempt to make GPT-4 fully autonomous.
 
-
-['microsoft', 'unilm']
-https://github.com/microsoft/unilm
-Large-scale Self-supervised Pre-training Across Tasks, Languages, and Modalities
+['reworkd', 'AgentGPT'] TypeScript
+https://github.com/reworkd/AgentGPT
+🤖 Assemble, configure, and deploy autonomous AI Agents in your browser
 ```
