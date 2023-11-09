@@ -5,10 +5,13 @@ from bs4 import BeautifulSoup
 
 if __name__ == "__main__":
     html = requests.get("https://github.com/trending?since=weekly").text
-    soup = BeautifulSoup(html, 'html.parser')
+    soup = BeautifulSoup(html, "html.parser")
 
     for proj_elem in soup.select("article"):
-        title = []; link = ''; lang = ''; desc = '';
+        title = []
+        link = ""
+        lang = ""
+        desc = ""
 
         title_elem = proj_elem.select_one("h2 a")
         if title_elem:
@@ -26,4 +29,3 @@ if __name__ == "__main__":
         print(f"{title} {lang}")
         print(link)
         print(f"{desc}\n")
-
