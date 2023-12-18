@@ -3,7 +3,7 @@ Fetch the front page of Hacker News
 
 ```
 john@spectre:~
-$ python hacker_news.py
+$ python hacker-news.py
 [713]: I fought the PayPal and I won (jessesingal.substack.com)
 story: None
 comments: https://news.ycombinator.com/item?id=33462658
