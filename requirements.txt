@@ -2,3 +2,5 @@ requests
 requests-html
 beautifulsoup4
 rich
+lxml
+lxml_html_clean
